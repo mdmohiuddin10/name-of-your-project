@@ -20,10 +20,10 @@ const BrandProduct = () => {
   return (
     <div className="mt-20">
       {product && product.length > 0 ? (
-        <div className="grid grid-cols-3 gap-5 mx-auto">
+        <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-5 mx-auto">
           {product?.map(productItem => (
             <div key={productItem._id} className="card bg-base-100 shadow-xl">
-              <figure><img className="w-[200px] h-[200px]" src={productItem.photo} alt="Shoes" /></figure>
+              <figure><img className="w-[300px] h-full mt-3" src={productItem.photo} alt="Shoes" /></figure>
               <div className="card-body">
                 <h2 className="text-xl font-semibold mb-3 text-center">{productItem.name}</h2>
               <div className="flex justify-around">
@@ -36,17 +36,22 @@ const BrandProduct = () => {
                 </div>
                 <div className="card-actions mt-3 justify-around">
                   <NavLink to={`/productDetail/${productItem._id}`}>
-                    <button className="btn btn-primary">Details</button>
+                    <button className="btn bg-purple-500 btn-primary">Details</button>
                   </NavLink>
                   <NavLink to={`/updateForm/${productItem._id}`}>
-                    <button className="btn btn-primary">Update</button>
+                    <button className="btn bg-purple-500 btn-primary">Update</button>
                   </NavLink>
                 </div>
               </div>
             </div>
           ))}
         </div>) : (
-        <p>No product</p>
+          <div className="">
+            <h2 className="text-3xl font-semibold text-center">No Products available</h2>
+            <img className="w-2/3justify-center mx-auto" src="https://i.postimg.cc/DfpMdnm4/2869599-6011.jpg" alt="" />
+          </div>
+
+        
       )
       }
     </div>
