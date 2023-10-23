@@ -52,7 +52,7 @@ const ProductDetail = () => {
 
   return (
   <div>
-      <div className="w-2/4 mx-auto mt-20 justify-end items-center">
+      <div className="w-2/4 mx-auto mt-20 bg-[#F4F3F0] px-5 py-5 justify-end items-center">
       <div className="flex">
         <div className="flex">
           <img className="w-full h-full" src={product?.photo} alt="Album" />

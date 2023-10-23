@@ -9,6 +9,8 @@ import Brandname from "../pages/Home/Brandname";
 import ProductDetail from "../pages/Home/ProductDetail";
 import Register from "../pages/Register/Register";
 import UpdateForm from "../pages/UpdateProduct/UpdateForm";
+import Mobile from "../pages/Home/Mobile/Mobile";
+import Laptop from "../pages/Home/Laptop/Laptop";
 
 
 
@@ -37,6 +39,14 @@ const router = createBrowserRouter([{
             element: <ProductDetail></ProductDetail>,
             loader: () => fetch('http://localhost:5001/addProduct')
 
+        },
+        {
+            path: '/mobile',
+            element: <Mobile></Mobile>,
+        },
+        {
+            path: '/laptop',
+            element: <Laptop></Laptop>
         },
 
         {
