@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 const UpdateForm = () => {
 
     const updateProduct = useLoaderData()
-    const {_id, name, brandName, type, price, photo, rating} = updateProduct
+    const {_id, name, brandName, type, price, photo, rating, description} = updateProduct
     // const {_id} = useParams()
     console.log(_id, name, brandName, type, price, photo, rating);
     const handleUpdateProduct = event => {
@@ -17,7 +17,8 @@ const UpdateForm = () => {
         const price = form.price.value
         const photo = form.photo.value
         const rating = form.rating.value
-        const upadatedItem = { name, brandName, type, price, photo, rating }
+        const description = form.description.value
+        const upadatedItem = { name, brandName, type, price, photo, rating, description }
         console.log(upadatedItem);
 
         // send data to the server
@@ -40,6 +41,7 @@ const UpdateForm = () => {
                     })
                 }
             })
+            
     }
     return (
         <div className="bg-[#F4F3F0] p-20">
@@ -104,6 +106,18 @@ const UpdateForm = () => {
                             <input type="text" defaultValue={photo} name="photo" placeholder="Photo" className="input input-bordered w-full" />
                         </label>
                     </div>
+                </div>
+                <div className="md:flex gap-5 mb-5">
+                    <div className="form-control w-full">
+                        <label className="label">
+                            <span className="label-text">Description</span>
+                        </label>
+                        <label className="input-group">
+                            <span>description</span>
+                            <input type="text" defaultValue={description} name="description" placeholder="Description" className="input input-bordered w-full" />
+                        </label>
+                    </div>
+                   
                 </div>
                 <input type="submit" value="Submit" className="btn btn-block bg-[#D2B48C]" />
             </form>

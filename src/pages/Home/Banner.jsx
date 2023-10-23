@@ -52,7 +52,7 @@ const Banner = () => {
         <div className="hero" style={{ backgroundImage: 'url(https://i.postimg.cc/prWW0Xgq/Untitled-design-1.png)' }}>
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="flex md:gap-8 gap-3 px-5">
-              <div className="flex-1 mt-24 md:mt-32">
+              <div className="flex-1 mt-10 md:mt-32">
                 <h2 className=" text-center mb-3 md:mb-10 text-xl md:text-7xl font-extrabold
               bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500
                 text-transparent bg-clip-text

@@ -53,7 +53,7 @@ const ProductDetail = () => {
     return (
         <div>
             <div className="card lg:card-side bg-base-100 shadow-xl">
-                <figure><img src={product?.photo} alt="Album" /></figure>
+                <figure><img className="" src={product?.photo} alt="Album" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{product?.name}</h2>
                     <h2 className="card-title">{product?.brandName}</h2>

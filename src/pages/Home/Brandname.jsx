@@ -9,7 +9,9 @@ const Brandname = () => {
 
     return (
         <div>
-           
+              <h2 className="text-2xl text-center font-semibold mt-10
+              bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500
+              text-transparent bg-clip-text">Our top Brands</h2>
                 <div className="grid md:grid-cols-6 grid-cols-3 gap-3 w-full mx-auto">
                     {
                         brandName.map(brand => <div key={brand.id} className="card mt-10 mb-10 bg-base-100 shadow-xl">
