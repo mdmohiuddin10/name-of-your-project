@@ -1,9 +1,7 @@
-
-
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
-const Laptop = () => {
+const Watch = () => {
     
     const [product, setProduct] = useState([])
 
@@ -13,7 +11,7 @@ const Laptop = () => {
         .then(data => setProduct(data))
     }, [])
 
-    const mobileProducts = product.filter((productItem) => productItem.type === "Laptop");
+    const mobileProducts = product.filter((productItem) => productItem.type === "Watch");
     console.log(mobileProducts);
 
     return (
@@ -48,4 +46,4 @@ const Laptop = () => {
     );
 };
 
-export default Laptop;
+export default Watch;

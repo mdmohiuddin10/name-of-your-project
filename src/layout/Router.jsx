@@ -48,6 +48,10 @@ const router = createBrowserRouter([{
             path: '/laptop',
             element: <Laptop></Laptop>
         },
+        {
+            path: '/watch',
+            element: <Laptop></Laptop>
+        },
 
         {
             path: '/addProduct',

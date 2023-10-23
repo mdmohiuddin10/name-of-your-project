@@ -3,6 +3,7 @@ import Mobile from "./Mobile/Mobile";
 import Banner from "./Banner";
 import Brandname from "./Brandname";
 import Laptop from "./Laptop/Laptop";
+import Watch from "./Watch/Watch";
 
 
 
@@ -13,6 +14,7 @@ const Home = () => {
             <Brandname></Brandname>
             <Mobile></Mobile>
             <Laptop></Laptop>
+            <Watch></Watch>
             <Footer></Footer>
         </div>
     );
