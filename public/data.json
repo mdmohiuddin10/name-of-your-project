@@ -1,0 +1,34 @@
+[
+      {
+        "id": 1,
+        "brandName": "Samsung",
+        "brandImage": "https://i.postimg.cc/jS59B7Vz/sumsung.jpg"
+      },
+      {
+        "id": 2,
+        "brandName": "Apple",
+        "brandImage": "https://i.postimg.cc/T1vjqZxk/apple.jpg"
+      },
+      {
+        "id": 3,
+        "brandName": "Google",
+        "brandImage": "https://i.postimg.cc/gjpcKKTy/goole.png"
+      },
+      {
+        "id": 4,
+        "brandName": "Oppo",
+        "brandImage": "https://i.postimg.cc/XvPjBWWC/oppo.png"
+      },
+      {
+        "id": 5,
+        "brandName": "Xiaomi",
+        "brandImage": "https://i.postimg.cc/TwtzSq7v/xiami.png"
+      },
+      {
+        "id": 6,
+        "brandName": "OnePlus",
+        "brandImage": "https://i.postimg.cc/BZdYvV1w/oneplus.png"
+      }
+    ]
+  
+  
