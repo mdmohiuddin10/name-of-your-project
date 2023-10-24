@@ -1,12 +1,8 @@
 import { NavLink, useLoaderData } from "react-router-dom";
 
-
-
 const Brandname = () => {
-
     const brandName = useLoaderData()
     // console.log(brandName);
-
     return (
         <div>
               <h2 className="text-2xl text-center font-semibold mt-10

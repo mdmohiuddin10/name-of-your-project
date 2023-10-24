@@ -1,4 +1,4 @@
-
+import { AiOutlineShoppingCart } from "react-icons/ai";
 
 const Banner = () => {
   return (
@@ -14,7 +14,7 @@ const Banner = () => {
                 text-transparent bg-clip-text
                 ">Enjoy Your Day</h2>
                 <p className="text-center text-white text-md md:text-6xl font-extrabold">Unlock Your Discount</p>
-                <button className="bg-purple-500 text-white px-2 py-2 md:px-3 md:py-3 text-sm md:text-xl rounded-lg md:mt-8 mt-3">Buy Now</button>
+                <button className="bg-purple-500 text-white px-2 py-2 md:px-3 md:py-3 text-sm md:text-xl flex items-center rounded-lg md:mt-8 mt-3">Buy Now<span className="text-center font-semibold ml-1"><AiOutlineShoppingCart></AiOutlineShoppingCart></span></button>
               </div>
               <div className="">
                 <img className="md:w-[600px] w-[200px] h-full" src="https://i.postimg.cc/tJhXyTbc/laptop.png" alt="" />
@@ -36,7 +36,7 @@ const Banner = () => {
                 text-transparent bg-clip-text
                 ">Perfect Electronics Launch</h2>
                 <p className="text-center text-white text-lg md:text-7xl font-extrabold">Free Delivery!!!</p>
-                <button className="bg-purple-500 text-white px-2 py-2 md:px-3 md:py-3 text-sm md:text-xl rounded-lg md:mt-8 mt-3">Buy Now</button>
+                <button className="bg-purple-500 text-white px-2 py-2 md:px-3 md:py-3 text-sm md:text-xl flex items-center rounded-lg md:mt-8 mt-3">Buy Now<span className="text-center font-semibold ml-1"><AiOutlineShoppingCart></AiOutlineShoppingCart></span></button>
               </div>
               <div className="">
                 <img className="md:w-[600px] w-[200px] h-full" src="https://i.postimg.cc/VkZ7RP0r/electronic-gadgets-601ff3a1b8a22.png" alt="" />
@@ -58,7 +58,7 @@ const Banner = () => {
                 text-transparent bg-clip-text
                 ">Ready Stock!</h2>
                 <p className="text-center text-white text-xl md:text-7xl font-extrabold">IPHONE 15 SERIES</p>
-                <button className="bg-purple-500 text-white px-2 py-2 md:px-3 md:py-3 text-sm md:text-xl rounded-lg md:mt-8 mt-3">Buy Now</button>
+                <button className="bg-purple-500 text-white px-2 py-2 md:px-3 md:py-3 text-sm md:text-xl flex items-center rounded-lg md:mt-8 mt-3">Buy Now<span className="text-center font-semibold ml-1"><AiOutlineShoppingCart></AiOutlineShoppingCart></span></button>
               </div>
               <div className="">
                 <img className="md:w-[600px] w-[200px] h-full" src="https://i.postimg.cc/VkZ7RP0r/electronic-gadgets-601ff3a1b8a22.png" alt="" />

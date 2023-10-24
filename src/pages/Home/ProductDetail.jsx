@@ -8,21 +8,23 @@ const ProductDetail = () => {
   const { id } = useParams();
   const { user } = useContext(AuthContex)
   const email = user?.email
-  console.log(email);
+  // console.log(email);
 
   const [product, setProduct] = useState();
   const products = useLoaderData();
+
+  console.log(product);
 
 
   useEffect(() => {
     const findProduct = products?.find(product => product._id === id);
     setProduct(findProduct);
+    console.log(findProduct);
   }, [id, products]);
 
   // console.log(product);
 
   const addToCartButton = () => {
-    console.log('clicked');
     const data = {
       product: product,
       email: email,
@@ -55,7 +57,7 @@ const ProductDetail = () => {
       <div className="w-2/4 mx-auto mt-20 bg-[#F4F3F0] px-5 py-5 justify-end items-center">
       <div className="flex">
         <div className="flex">
-          <img className="w-full h-full" src={product?.photo} alt="Album" />
+          <img className="w-[300px] h-full" src={product?.photo} alt="Album" />
         </div>
         <div className="flex-1">
           <h2 className="card-title mb-3">{product?.name}</h2>
