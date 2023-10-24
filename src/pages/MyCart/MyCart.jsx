@@ -112,6 +112,10 @@ console.log(newProuct);
   return (
     <div>
       
+      
+      <h3>{newProuct[0]?.product.name}</h3>
+      <img src={newProuct[0]?.product.photo} alt="" /> 
+    
     </div>
   );
 };

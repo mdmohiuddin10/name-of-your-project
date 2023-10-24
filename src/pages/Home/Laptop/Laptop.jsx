@@ -1,16 +1,15 @@
 import { useContext, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import { AiOutlineShoppingCart,AiFillEye } from "react-icons/ai";
-import Swal from "sweetalert2";
+import { AiOutlineShoppingCart, AiFillEye } from "react-icons/ai";
 import { AuthContex } from "../../../firebase/AuthProvider";
 
 const Laptop = () => {
-   const [product, setProduct] = useState([]);
-   const [isShow, setIsShow] = useState(false);
+    const [product, setProduct] = useState([]);
+    const [isShow, setIsShow] = useState(false);
 
-   const { user } = useContext(AuthContex)
-   const email = user?.email
-   console.log(email);
+    const { user } = useContext(AuthContex)
+    const email = user?.email
+    console.log(email);
 
     useEffect(() => {
         fetch('http://localhost:5001/addProduct')
@@ -19,40 +18,20 @@ const Laptop = () => {
     }, []);
 
 
-    const addToCartButton = () => {
-        console.log('clicked');
-        const data = {
-          product: product,
-          email: email,
-        };
-    
-        fetch('http://localhost:5001/addToCart', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data),
-        })
-          .then((res) => res.json())
-          .then((data) => {
-            console.log(data);
-            if (data.insertedId) {
-              Swal.fire({
-                title: 'Success!',
-                text: 'Added Product Successfully',
-                icon: 'success',
-                confirmButtonText: 'Cool',
-              });
-            }
-          });
-      };
 
     const filteredProducts = product.filter((productItem) => productItem.type === "Laptop");
 
     const displayedProducts = isShow ? filteredProducts : filteredProducts.slice(0, 8);
 
     return (
-        <div className="mt-20">
+        <div className="mt-10">
+               <img className="w-3/4 mx-auto mb-10" src="https://i.postimg.cc/fLcFcQW2/super-sale-banner-set-realistic-devices-smartphone-tablet-laptop-computer-colour-background-super-sa.webp" alt="" />
+            {/* <Marquee> */}
+                <div>
+                    <h2 className="text-3xl mb-5  bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500
+                text-transparent bg-clip-text font-bold">Flase Sale!! Laptop Enjoy Upto 10% Discount</h2>
+                </div>
+            {/* </Marquee> */}
             <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-5 mx-auto">
                 {displayedProducts.map(productItem => (
                     <div key={productItem._id} className="card bg-base-100 shadow-xl">
@@ -71,7 +50,10 @@ const Laptop = () => {
                                 <NavLink to={`/productDetail/${productItem._id}`}>
                                     <button className="btn bg-purple-500 btn-primary">Details<span className="text-2xl font-semibold"><AiFillEye></AiFillEye></span></button>
                                 </NavLink>
-                                    <button onClick={addToCartButton} className="btn bg-purple-500 btn-primary">Add to cart<span className="text-2xl font-semibold"><AiOutlineShoppingCart></AiOutlineShoppingCart></span></button>
+                                <NavLink to={`/productDetail/${productItem._id}`}>
+                                    <button className="btn bg-purple-500 btn-primary">Add to cart<span className="text-2xl font-semibold"><AiOutlineShoppingCart></AiOutlineShoppingCart></span></button>
+                                </NavLink>
+
                             </div>
                         </div>
                     </div>

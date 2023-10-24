@@ -20,34 +20,6 @@ const Mobile = () => {
     }, []);
 
 
-    const addToCartButton = () => {
-        console.log('clicked');
-        const data = {
-            product: product,
-            email: email,
-        };
-
-        fetch('http://localhost:5001/addToCart', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data),
-        })
-            .then((res) => res.json())
-            .then((data) => {
-                console.log(data);
-                if (data.insertedId) {
-                    Swal.fire({
-                        title: 'Success!',
-                        text: 'Added Product Successfully',
-                        icon: 'success',
-                        confirmButtonText: 'Cool',
-                    });
-                }
-            });
-    };
-
     const filteredProducts = product.filter((productItem) => productItem.type === "Mobile");
 
     const displayedProducts = isShow ? filteredProducts : filteredProducts.slice(0, 8);
@@ -80,7 +52,9 @@ const Mobile = () => {
                                 <NavLink to={`/productDetail/${productItem._id}`}>
                                     <button className="btn bg-purple-500 btn-primary">Details<span className="text-2xl font-semibold"><AiFillEye></AiFillEye></span></button>
                                 </NavLink>
-                                <button onClick={addToCartButton} className="btn bg-purple-500 btn-primary">Add to cart<span className="text-2xl font-semibold"><AiOutlineShoppingCart></AiOutlineShoppingCart></span></button>
+                                <NavLink to={`/productDetail/${productItem._id}`}>
+                                    <button className="btn bg-purple-500 btn-primary">Details<span className="text-2xl font-semibold"><AiFillEye></AiFillEye></span></button>
+                                </NavLink>
                             </div>
                         </div>
                     </div>

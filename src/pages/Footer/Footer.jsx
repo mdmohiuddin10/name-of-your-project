@@ -10,8 +10,11 @@ const Footer = () => {
                 <div>
                     <aside className="px-2">
 
-                        <p className="text-xl font-semibold mb-2">Health Event Pro</p>
-                        <p className="text-sm mb-2">Providing reliable service since 2023</p>
+                        <p className="text-xl font-semibold mb-2">Gadget Galaxy</p>
+                        <p className="text-sm mb-2">Multi Branded Electronics Shop </p>
+                        <h2 className="flex gap-2 items-center mb-2"><span><FaLocationArrow></FaLocationArrow></span>
+                            21, 22 Bipony Bithan Shopping Complex
+                        </h2>
                         <h2 className="flex gap-2 items-center mb-2"><span><FaLocationArrow></FaLocationArrow></span>
                             21 Chawkbazar, Chittagong, Bangladesh
                         </h2>

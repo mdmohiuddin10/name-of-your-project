@@ -40,7 +40,7 @@ const Navber = () => {
             {navLink}
           </ul>
         </div>
-        <NavLink to={'./'} className=" normal-case md:text-xl text-lg">Health Event Pro</NavLink>
+        <NavLink to={'./'} className=" normal-case md:text-xl text-lg"><img className="w-[200px] h-[50px] " src="https://i.postimg.cc/DfdqrM2W/Gadget-Galaxy-1.png" alt="" /></NavLink>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
