@@ -43,7 +43,7 @@ const Navber = () => {
         <NavLink to={'./'} className=" normal-case md:text-xl text-lg"><img className="w-[200px] h-[50px] " src="https://i.postimg.cc/DfdqrM2W/Gadget-Galaxy-1.png" alt="" /></NavLink>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="menu menu-horizontal px-1 text-lg font-semibold">
           {navLink}
         </ul>
       </div>
@@ -53,10 +53,10 @@ const Navber = () => {
             <span className="ml-2 md:text-xl text-sm">{user.displayName}</span>
             <img className="w-[30px] ml-1 rounded-full" src={user.photoURL} alt="photo" />
 
-            <a onClick={handleSignOut} className="btn">Sign Out</a>
+            <a onClick={handleSignOut} className="btn text-lg">Sign Out</a>
           </> :
             <Link to={'/login'}>
-              <button className="btn">Login</button>
+              <button className="btn text-lg">Login</button>
             </Link>
         }
       </div>

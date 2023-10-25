@@ -30,7 +30,7 @@ const ProductDetail = () => {
       email: email,
     };
 
-    fetch('http://localhost:5001/addToCart', {
+    fetch('https://assignment-10-r7m717nv8-mdmohiuddin10.vercel.app/addToCart', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

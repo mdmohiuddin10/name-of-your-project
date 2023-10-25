@@ -31,13 +31,13 @@ const router = createBrowserRouter([{
         {
             path: '/brandName/:brandName',
             element: <BrandProduct />,
-            loader: () => fetch('http://localhost:5001/addProduct')
+            loader: () => fetch('https://assignment-10-r7m717nv8-mdmohiuddin10.vercel.app/addProduct')
 
         },
         {
             path: '/productDetail/:id',
             element: <ProductDetail></ProductDetail>,
-            loader: () => fetch('http://localhost:5001/addProduct')
+            loader: () => fetch('https://assignment-10-r7m717nv8-mdmohiuddin10.vercel.app/addProduct')
 
         },
         {
@@ -60,12 +60,12 @@ const router = createBrowserRouter([{
         {
             path: '/updateForm/:id',
             element: <UpdateForm></UpdateForm>,
-            loader: ({params}) => fetch(`http://localhost:5001/addProduct/${params.id}`)
+            loader: ({params}) => fetch(`https://assignment-10-r7m717nv8-mdmohiuddin10.vercel.app/addProduct/${params.id}`)
         },
         {
             path: '/myCart',
             element: <MyCart />,
-            loader: () => fetch('http://localhost:5001/addToCart')
+            loader: () => fetch('https://assignment-10-r7m717nv8-mdmohiuddin10.vercel.app/addToCart')
                    
         },
         

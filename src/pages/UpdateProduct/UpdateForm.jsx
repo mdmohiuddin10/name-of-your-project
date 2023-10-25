@@ -22,7 +22,7 @@ const UpdateForm = () => {
         console.log(upadatedItem);
 
         // send data to the server
-        fetch(`http://localhost:5001/addProduct/${_id}`, {
+        fetch(`https://assignment-10-r7m717nv8-mdmohiuddin10.vercel.app/addProduct/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

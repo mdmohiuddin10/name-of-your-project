@@ -1,7 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import { AiOutlineShoppingCart,AiFillEye } from "react-icons/ai";
-import Swal from "sweetalert2";
+import { AiFillEye } from "react-icons/ai";
 import { AuthContex } from "../../../firebase/AuthProvider";
 
 const Watch = () => {
@@ -13,7 +12,7 @@ const Watch = () => {
    console.log(email);
 
     useEffect(() => {
-        fetch('http://localhost:5001/addProduct')
+        fetch('https://assignment-10-r7m717nv8-mdmohiuddin10.vercel.app/addProduct')
             .then(res => res.json())
             .then(data => setProduct(data))
     }, []);
@@ -26,7 +25,7 @@ const Watch = () => {
 
     return (
         <div className="mt-10">
-        <img className="w-3/4 mx-auto mb-10" src="https://i.postimg.cc/5yDSs1qd/0030285-Shera-Daame-Shera-Smartwatch-Desktop-View.jpg" alt="" />
+        <img className="w-3/4 mx-auto mb-20" src="https://i.postimg.cc/5yDSs1qd/0030285-Shera-Daame-Shera-Smartwatch-Desktop-View.jpg" alt="" />
      {/* <Marquee> */}
          <div>
              <h2 className="text-3xl mb-5  bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500
@@ -59,6 +58,7 @@ const Watch = () => {
                     </div>
                 ))}
             </div>
+            <div className="w-full mx-auto lg:ml-[640px] md:[350px]">
             {filteredProducts.length > 8 && (
                 <button
                     className="bg-[#FF444A] mt-10 text-center mb-20 px-2 py-2 rounded-lg text-white font-semibold w-[100px] mx-auto"
@@ -67,6 +67,7 @@ const Watch = () => {
                     {isShow ? "Show Less" : "See All"}
                 </button>
             )}
+            </div>
         </div>
     );
 };

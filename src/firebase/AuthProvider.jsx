@@ -1,14 +1,10 @@
-
 import { createContext, useEffect, useState } from "react";
 import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import app from "./firebae.config";
 
-
-
-
 const auth = getAuth(app)
 
- export const AuthContex = createContext(null)
+export const AuthContex = createContext(null)
 const AuthProvider = ({children}) => {
     const provider = new GoogleAuthProvider()
 

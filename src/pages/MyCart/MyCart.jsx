@@ -43,7 +43,7 @@ import { useContext } from "react";
 //             if (result.isConfirmed) {
 //                 console.log('delete');
 
-//             fetch(`http://localhost:5001/addToCart/${_id}`,{
+//             fetch(`https://assignment-10-r7m717nv8-mdmohiuddin10.vercel.app/addToCart/${_id}`,{
 //                 method: 'DELETE'
 //             })
 //             .then(res=> res.json())

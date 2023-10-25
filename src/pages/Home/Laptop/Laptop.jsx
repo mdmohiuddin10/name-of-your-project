@@ -12,7 +12,7 @@ const Laptop = () => {
     console.log(email);
 
     useEffect(() => {
-        fetch('http://localhost:5001/addProduct')
+        fetch('https://assignment-10-r7m717nv8-mdmohiuddin10.vercel.app/addProduct')
             .then(res => res.json())
             .then(data => setProduct(data))
     }, []);
@@ -25,7 +25,7 @@ const Laptop = () => {
 
     return (
         <div className="mt-10">
-               <img className="w-3/4 mx-auto mb-10" src="https://i.postimg.cc/fLcFcQW2/super-sale-banner-set-realistic-devices-smartphone-tablet-laptop-computer-colour-background-super-sa.webp" alt="" />
+               <img className="w-3/4 mx-auto mb-20" src="https://i.postimg.cc/fLcFcQW2/super-sale-banner-set-realistic-devices-smartphone-tablet-laptop-computer-colour-background-super-sa.webp" alt="" />
             {/* <Marquee> */}
                 <div>
                     <h2 className="text-3xl mb-5  bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500
@@ -59,6 +59,7 @@ const Laptop = () => {
                     </div>
                 ))}
             </div>
+            <div className="w-full mx-auto lg:ml-[640px] md:[350px]">
             {filteredProducts.length > 8 && (
                 <button
                     className="bg-[#FF444A] mt-10 text-center mb-20 px-2 py-2 rounded-lg text-white font-semibold w-[100px] mx-auto"
@@ -67,6 +68,7 @@ const Laptop = () => {
                     {isShow ? "Show Less" : "See All"}
                 </button>
             )}
+            </div>
         </div>
     );
 };
