@@ -4,6 +4,7 @@ import Banner from "./Banner";
 import Brandname from "./Brandname";
 import Laptop from "./Laptop/Laptop";
 import Watch from "./Watch/Watch";
+import WhyChooseUs from "./WhyChooseUs";
 
 
 
@@ -15,6 +16,7 @@ const Home = () => {
             <Mobile></Mobile>
             <Laptop></Laptop>
             <Watch></Watch>
+            <WhyChooseUs></WhyChooseUs>
             <Footer></Footer>
         </div>
     );

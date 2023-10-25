@@ -11,12 +11,15 @@ import Register from "../pages/Register/Register";
 import UpdateForm from "../pages/UpdateProduct/UpdateForm";
 import Mobile from "../pages/Home/Mobile/Mobile";
 import Laptop from "../pages/Home/Laptop/Laptop";
+import PrivateRoute from "./PrivateRoute";
+import ErrorPage from "../pages/Errorpage/ErrorPage";
 
 
 
 const router = createBrowserRouter([{
     path: '/',
     element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
         {
             path: '/',
@@ -36,7 +39,7 @@ const router = createBrowserRouter([{
         },
         {
             path: '/productDetail/:id',
-            element: <ProductDetail></ProductDetail>,
+            element: <PrivateRoute><ProductDetail></ProductDetail></PrivateRoute>,
             loader: () => fetch('https://assignment-10-r7m717nv8-mdmohiuddin10.vercel.app/addProduct')
 
         },
@@ -55,16 +58,16 @@ const router = createBrowserRouter([{
 
         {
             path: '/addProduct',
-            element: <AddProduct></AddProduct>
+            element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>
         },
         {
             path: '/updateForm/:id',
-            element: <UpdateForm></UpdateForm>,
+            element: <PrivateRoute><UpdateForm></UpdateForm></PrivateRoute>,
             loader: ({params}) => fetch(`https://assignment-10-r7m717nv8-mdmohiuddin10.vercel.app/addProduct/${params.id}`)
         },
         {
             path: '/myCart',
-            element: <MyCart />,
+            element: <PrivateRoute><MyCart /></PrivateRoute>,
             loader: () => fetch('https://assignment-10-r7m717nv8-mdmohiuddin10.vercel.app/addToCart')
                    
         },
