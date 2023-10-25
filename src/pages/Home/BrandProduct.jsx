@@ -37,12 +37,12 @@ const BrandProduct = () => {
               <div key={productItem._id} className="card bg-base-100 shadow-xl">
                 <figure><img className="w-[300px] h-full mt-3" src={productItem.photo} alt="Shoes" /></figure>
                 <div className="card-body">
-                  <h2 className="text-xl font-semibold mb-3 text-center">{productItem.name}</h2>
-                  <div className="flex justify-around">
-                    <h2 className="card-title">{productItem.brandName}</h2>
-                    <h2 className="card-title">{productItem.type}</h2>
+                  <h2 className="md:text-xl text-md font-semibold mb-3 text-center">{productItem.name}</h2>
+                  <div className="flex gap-3 justify-around">
+                    <h2 className="font-semibold md:text-xl text-md">{productItem.brandName}</h2>
+                    <h2 className="font-semibold md:text-xl text-md">{productItem.type}</h2>
                   </div>
-                  <div className="flex mt-3 justify-around">
+                  <div className="flex gap-3 mt-3 justify-around">
                     <h2 className="text-xl font-semibold text-blue-700">{productItem.price}</h2>
                     <h2 className="text-xl font-semibold">{productItem.rating}</h2>
                     {/* <StarRating rating={productItem.rating} /> */}

@@ -5,7 +5,7 @@ const Brandname = () => {
     // console.log(brandName);
     return (
         <div>
-              <h2 className="text-4xl text-center font-semibold mt-10
+              <h2 className="md:text-4xl text-2xl text-center font-semibold mt-10
               bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500
               text-transparent bg-clip-text">Our top Brands</h2>
                 <div className="grid md:grid-cols-6 grid-cols-3 gap-3 w-full mx-auto">

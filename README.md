@@ -1,8 +1,7 @@
 # React + Vite
+* if anyone click on brand image he will get relavent products
+* an logged user can add and modify the products
+* if anyone click details button he will see the details of the products
+* he can add this procts his cart
+* he will see his products in the my cart section
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh

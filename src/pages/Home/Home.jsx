@@ -8,8 +8,10 @@ import WhyChooseUs from "./WhyChooseUs";
 
 
 
+
 const Home = () => {
-    return (
+   
+   return (
         <div>
             <Banner></Banner>
             <Brandname></Brandname>
@@ -23,3 +25,6 @@ const Home = () => {
 };
 
 export default Home;
+
+
+

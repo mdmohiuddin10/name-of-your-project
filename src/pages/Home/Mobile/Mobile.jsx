@@ -29,32 +29,30 @@ const Mobile = () => {
                 <img className="md:w-3/4 mx-auto mb-20" src="https://i.postimg.cc/rmwS8vNx/Order.png" alt="" />
                 {/* <Marquee> */}
                 <div>
-                    <h2 className="text-3xl  bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500
+                    <h2 className="md:text-3xl text-xl  bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500
                 text-transparent bg-clip-text mb-5 font-bold">Flase Sale!! Smart Phone Enjoy Upto 10% Discount</h2>
                 </div>
                 {/* </Marquee> */}
                 <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-5 mx-auto">
                     {displayedProducts.map(productItem => (
                         <div key={productItem._id} className="card bg-base-100 shadow-xl">
-                            <figure><img className="w-[300px] h-[300px] mt-3" src={productItem.photo} alt="Laptop" /></figure>
+                            <figure><img className="lg:w-[300px] md:w-[250px] w-[200px] h-[250px] md:h-[300px] mt-3" src={productItem.photo} alt="Laptop" /></figure>
                             <div className="card-body">
-                                <h2 className="text-xl font-semibold mb-3 text-center">{productItem.name}</h2>
-                                <div className="flex justify-around">
-                                    <h2 className="card-title">{productItem.brandName}</h2>
-                                    <h2 className="card-title">{productItem.type}</h2>
+                                <h2 className="md:text-xl text-md font-semibold mb-3 text-center">{productItem.name}</h2>
+                                <div className="flex gap-2 justify-around">
+                                    <h2 className="card-title md:text-xl text-sm">{productItem.brandName}</h2>
+                                    <h2 className="card-title md:text-xl text-sm">{productItem.type}</h2>
                                 </div>
-                                <div className="flex mt-3 justify-around">
+                                <div className="flex mt-3 gap-2 justify-around">
                                     <h2 className="text-xl font-semibold text-blue-700">{productItem.price}</h2>
                                     <h2 className="text-xl font-semibold">{productItem.rating}</h2>
                                     {/* <StarRating rating={productItem.rating} /> */}
                                 </div>
                                 <div className="card-actions mt-3 justify-around">
                                     <NavLink to={`/productDetail/${productItem._id}`}>
-                                        <button className="btn bg-purple-500 btn-primary">Details<span className="text-2xl font-semibold"><AiFillEye></AiFillEye></span></button>
+                                        <button className="btn bg-purple-500 btn-primary">Details<span className="md:text-2xl text-md font-semibold"><AiFillEye></AiFillEye></span></button>
                                     </NavLink>
-                                    <NavLink to={`/productDetail/${productItem._id}`}>
-                                        <button className="btn bg-purple-500 btn-primary">Details<span className="text-2xl font-semibold"><AiFillEye></AiFillEye></span></button>
-                                    </NavLink>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -62,7 +60,7 @@ const Mobile = () => {
                 </div>
 
             </div>
-            <div className="w-full mx-auto lg:ml-[640px] md:[350px]">
+            <div className="w-full mx-auto ml-[150px] lg:ml-[640px] md:ml-[350px]">
                 {filteredProducts.length > 8 && (
                     <button
                         className="bg-[#FF444A] mt-10 text-center mb-20 px-2 py-2 rounded-lg text-white font-semibold w-[100px]"

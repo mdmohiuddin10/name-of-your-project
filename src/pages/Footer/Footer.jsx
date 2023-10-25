@@ -51,7 +51,7 @@ const Footer = () => {
             </footer>
 
             <div className="text-center text-white mt-5 px-2 pb-10">
-                <p>Copyright © 2023 - All right reserved by Health Event Pro</p>
+                <p>Copyright © 2023 - All right reserved by Gadget Galaxy</p>
             <div className="flex gap-3 w-full justify-center mt-5 mx-auto">
                 <img className="w-[100px] h-[40px]" src="https://i.postimg.cc/63DRKTj4/download.png" alt="" />
                 <img className="w-[100px] h-[40px]" src="https://i.postimg.cc/RZNM7GV9/download-1.png" alt="" />

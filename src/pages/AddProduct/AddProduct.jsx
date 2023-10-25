@@ -49,7 +49,7 @@ const AddProduct = () => {
                             <span className="label-text">Brand Name</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="brandName" placeholder="Brand Name" className="input input-bordered w-full" />
+                            <input type="text" name="brandName" placeholder="Brand Name" className="input input-bordered md:w-full w-[300px]" />
                         </label>
                     </div>
                     <div className="form-control w-1/2">
@@ -57,7 +57,7 @@ const AddProduct = () => {
                             <span className="label-text">Name</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="name" placeholder="Product Name" className="input input-bordered w-full" />
+                            <input type="text" name="name" placeholder="Product Name" className="input input-bordered md:w-full w-[300px]" />
                         </label>
                     </div>
                 </div>
@@ -67,7 +67,7 @@ const AddProduct = () => {
                             <span className="label-text">Type</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="type" placeholder="type" className="input input-bordered w-full" />
+                            <input type="text" name="type" placeholder="type" className="input input-bordered w-[300px] md:w-full" />
                         </label>
                     </div>
                     <div className="form-control w-1/2">
@@ -75,7 +75,7 @@ const AddProduct = () => {
                             <span className="label-text">Price</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="price" placeholder="Price" className="input input-bordered w-full" />
+                            <input type="text" name="price" placeholder="Price" className="input input-bordered w-[300px] md:w-full" />
                         </label>
                     </div>
                 </div>
@@ -85,7 +85,7 @@ const AddProduct = () => {
                             <span className="label-text">Rating</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="rating" placeholder="Rating" className="input input-bordered w-full" />
+                            <input type="text" name="rating" placeholder="Rating" className="input input-bordered w-[300px] md:w-full" />
                         </label>
                     </div>
                     <div className="form-control w-1/2">
@@ -93,7 +93,7 @@ const AddProduct = () => {
                             <span className="label-text">Photo URL</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="photo" placeholder="Photo" className="input input-bordered w-full" />
+                            <input type="text" name="photo" placeholder="Photo" className="input input-bordered w-[300px] md:w-full" />
                         </label>
                     </div>
                 </div>
