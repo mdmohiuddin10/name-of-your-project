@@ -14,6 +14,7 @@ import Laptop from "../pages/Home/Laptop/Laptop";
 import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../pages/Errorpage/ErrorPage";
 import WishCart from "../pages/WishCart/WishCart";
+import Checkout from "../pages/Checkout/Checkout";
 
 
 
@@ -75,7 +76,13 @@ const router = createBrowserRouter([{
         {
             path: '/wishCart',
             element: <PrivateRoute><WishCart></WishCart></PrivateRoute>,
-            loader: () => fetch('http://localhost:5001/wishCart')
+            loader: () => fetch('https://assignment-10-6cw90l870-mdmohiuddin10.vercel.app/wishCart')
+                   
+        },
+        {
+            path: '/checkout/:id',
+            element: <PrivateRoute><Checkout></Checkout></PrivateRoute>,
+            loader: () => fetch('https://assignment-10-6cw90l870-mdmohiuddin10.vercel.app/addToCart')
                    
         },
         

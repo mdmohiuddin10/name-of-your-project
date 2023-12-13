@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { AuthContex } from "../../firebase/AuthProvider";
 import Swal from "sweetalert2";
 
@@ -11,7 +11,7 @@ const MyCart = () => {
   const email = (user?.email);
 
   const newProuct = fullProduct.filter(setProduct => setProduct.email === email)
-  console.log('from new product', newProuct);
+  // console.log('from new product', newProuct);
 
   //   delete 
   const handleDelete = _id => {
@@ -63,7 +63,11 @@ const MyCart = () => {
               <td>{products?.product.name}</td>
               <td>{products?.product.type}</td>
               <td>{products?.product.price}</td>
-              <td><button className="btn btn-primary">CheckOut</button></td>
+              <td>
+                <Link to={`/checkout/${products._id}`}>
+                  <button className="btn btn-primary">CheckOut</button>
+                </Link>
+              </td>
               <td><button onClick={() => handleDelete(products._id)} className="btn btn-primary">Delete</button></td>
             </tr>)}
 

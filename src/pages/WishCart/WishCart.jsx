@@ -11,6 +11,40 @@ const WishCart = () => {
     const { user } = useContext(AuthContex)
     const email = (user?.email);
 
+    // 
+    const addToCartButton = (products) => {
+        const name = products.product.name;
+        const type = products?.product.type;
+        const price = products?.product.price;
+
+        const product = { name, type, price }
+
+        const data = {
+            product: product,
+            email: email,
+        };
+
+        fetch('https://assignment-10-r7m717nv8-mdmohiuddin10.vercel.app/addToCart', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+                if (data.insertedId) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Added Product Successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Cool',
+                    });
+                }
+            });
+    };
+
     //   delete 
     const handleDelete = _id => {
         console.log(_id);
@@ -24,19 +58,19 @@ const WishCart = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5001/wishCart/${_id}`, {
+                fetch(`https://assignment-10-6cw90l870-mdmohiuddin10.vercel.app/wishCart/${_id}`, {
                     method: 'DELETE',
-                  })
-                .then(res => res.json())
-                .then(res => {
-                    if (res.deletedCount > 0) {
-                        Swal.fire({
-                            title: "Deleted!",
-                            text: "Item has been deleted.",
-                            icon: "success"
-                        });
-                    }
                 })
+                    .then(res => res.json())
+                    .then(res => {
+                        if (res.deletedCount > 0) {
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Item has been deleted.",
+                                icon: "success"
+                            });
+                        }
+                    })
             }
         });
     };
@@ -65,7 +99,9 @@ const WishCart = () => {
                             <td>{products?.product.name}</td>
                             <td>{products?.product.type}</td>
                             <td>{products?.product.price}</td>
-                            <td><button className="btn btn-primary">CheckOut</button></td>
+                            <td>
+                                <button onClick={() => addToCartButton(products)} className="btn bg-purple-500 btn-primary">Add to Cart</button>
+                            </td>
                             <td><button onClick={() => handleDelete(products._id)} className="btn btn-primary">Delete</button></td>
                         </tr>)}
 

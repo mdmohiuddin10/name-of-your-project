@@ -32,7 +32,7 @@ const Watch = () => {
         };
         console.log(data);
 
-        fetch('http://localhost:5001/wishCart', {
+        fetch('https://assignment-10-6cw90l870-mdmohiuddin10.vercel.app/wishCart', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
