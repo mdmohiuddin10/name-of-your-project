@@ -1,7 +1,4 @@
 
-
-
-
 import { useContext } from "react";
 import { FaGoogle } from "react-icons/fa";
 import Swal from "sweetalert2";

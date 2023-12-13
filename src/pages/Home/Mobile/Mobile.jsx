@@ -2,6 +2,8 @@ import { useContext, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { AiFillEye } from "react-icons/ai";
 import { AuthContex } from "../../../firebase/AuthProvider";
+import { FaHeart } from "react-icons/fa";
+import Swal from "sweetalert2";
 // import {StarRating} from "../Rating/StarRating";
 
 const Mobile = () => {
@@ -10,7 +12,7 @@ const Mobile = () => {
 
     const { user } = useContext(AuthContex)
     const email = user?.email
-    console.log(email);
+  
 
     useEffect(() => {
         fetch('https://assignment-10-r7m717nv8-mdmohiuddin10.vercel.app/addProduct')
@@ -23,6 +25,38 @@ const Mobile = () => {
 
     const displayedProducts = isShow ? filteredProducts : filteredProducts.slice(0, 8);
 
+
+    const addToWishCart = (productItem) => {
+        const data = {
+          product: productItem,
+          email: email,
+        };
+        console.log(data);
+    
+        fetch('http://localhost:5001/wishCart', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            if (data.insertedId) {
+              Swal.fire({
+                title: 'Success!',
+                text: 'Product added Wishlist Successfully',
+                icon: 'success',
+                confirmButtonText: 'Ok',
+              });
+            }
+          });
+      };
+    
+
+
+    // 
     return (
         <div>
             <div className="mt-5">
@@ -50,9 +84,9 @@ const Mobile = () => {
                                 </div>
                                 <div className="card-actions mt-3 justify-around">
                                     <NavLink to={`/productDetail/${productItem._id}`}>
-                                        <button className="btn bg-purple-500 btn-primary">Details<span className="md:text-2xl text-md font-semibold"><AiFillEye></AiFillEye></span></button>
+                                        <button className="btn bg-purple-500 btn-primary"><span className="md:text-2xl text-md font-semibold"><AiFillEye></AiFillEye></span></button>
                                     </NavLink>
-                                    
+                                    <button onClick={()=>addToWishCart(productItem)} className="btn bg-purple-500 btn-primary"><span className="md:text-2xl text-md font-semibold"><FaHeart></FaHeart></span></button>
                                 </div>
                             </div>
                         </div>

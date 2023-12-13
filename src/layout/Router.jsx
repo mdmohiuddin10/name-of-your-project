@@ -13,6 +13,7 @@ import Mobile from "../pages/Home/Mobile/Mobile";
 import Laptop from "../pages/Home/Laptop/Laptop";
 import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../pages/Errorpage/ErrorPage";
+import WishCart from "../pages/WishCart/WishCart";
 
 
 
@@ -69,6 +70,12 @@ const router = createBrowserRouter([{
             path: '/myCart',
             element: <PrivateRoute><MyCart /></PrivateRoute>,
             loader: () => fetch('https://assignment-10-r7m717nv8-mdmohiuddin10.vercel.app/addToCart')
+                   
+        },
+        {
+            path: '/wishCart',
+            element: <PrivateRoute><WishCart></WishCart></PrivateRoute>,
+            loader: () => fetch('http://localhost:5001/wishCart')
                    
         },
         
